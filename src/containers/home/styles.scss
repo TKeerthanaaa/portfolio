@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  width: 80%;
+  height: 65vh;
+  color: rgb(249, 242, 228);
+  justify-content: center;
+  align-items: center;
+  margin-top: -5rem;
+  text-align: center;
+
+  .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 15rem;
+
+    .words {
+      font-size: 2rem;
+    }
+    .name {
+      color: #971f7d;
+      text-shadow: 1px 2px 2px rgb(137, 99, 227);
+    }
+
+    .para {
+      padding: 1rem 5rem;
+      font-size: 1.1rem;
+      text-shadow: 3px 2px 7px rgb(154, 102, 136);
+    }
+  }
+}
+
+.photo {
+  position: relative;
+  width: 100%;
+  // margin-top: 50px;
+  margin-right: 5rem;
+  background: rgba(0, 0, 0, 0);
+  transform: rotate(-360deg) skew(5deg) scale(0.8);
+  transition: 0.5s;
+}
+.photo img {
+  position: absolute;
+  transition: 0.5s;
+  width: 120%;
+  height: 65vh;
+}
+.photo:hover img:nth-child(4) {
+  transform: translate(160px, -160px);
+  opacity: 1;
+}
+.photo:hover img:nth-child(3) {
+  transform: translate(120px, -120px);
+  opacity: 0.4;
+}
+.photo:hover img:nth-child(2) {
+  transform: translate(80px, -80px);
+  opacity: 0.3;
+}
+.photo:hover img:nth-child(1) {
+  transform: translate(40px, -40px);
+  opacity: 0.2;
+}

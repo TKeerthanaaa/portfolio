@@ -1,0 +1,110 @@
+.contact {
+  &_content {
+    padding: 20px;
+
+    &_header-text {
+      color: var(--clr-theme-sub-text-color);
+      display: inline-block;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 1em;
+      letter-spacing: 1px;
+      position: relative;
+      padding: 10px 10px;
+      border-bottom: 2px solid var(--clr-theme-main-text-color);
+    }
+
+    &_header-text::before,
+    &_header-text::after {
+      position: absolute;
+      content: "";
+      width: 2px;
+      height: 5px;
+      background-color: var(--clr-theme-main-text-color);
+      bottom: -1px;
+    }
+
+    &_header-text::before {
+      left: 0;
+    }
+    &_header-text::after {
+      right: 0;
+    }
+    &_form {
+      margin-top: 30px;
+
+      &_wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        margin-bottom: 30px;
+
+        div {
+          position: relative;
+          .inputName,
+          .inputEmail,
+          .inputDescription {
+            width: 100%;
+            border: 2px solid var(clr-theme-main-color);
+            padding: 16px 12px;
+            transition: all 0.5s ease;
+            position: relative;
+            background-color: transparent;
+            color: whitesmoke;
+          }
+
+          .nameLabel,
+          .emailLabel,
+          .descriptionLabel {
+            font-weight: 700;
+            position: absolute;
+            top: 5px;
+            left: 18px;
+            transition: all 0.2s ease;
+            color: #662558;
+            font-size: 16px;
+          }
+
+          .inputName:focus,
+          .inputEmail:focus,
+          .inputDescription:focus {
+            outline: none;
+          }
+          .inputName:focus + .nameLabel,
+          .inputName:valid + .nameLabel,
+          .inputEmail:focus + .emailLabel,
+          .inputEmail:valid + .emailLabel,
+          .inputDescription:focus + .descriptionLabel,
+          .inputDescription:valid + .descriptionLabel {
+            font-size: 18px;
+            top: -25px;
+            left: 0px;
+          }
+        }
+      }
+    }
+    button {
+      cursor: pointer;
+      padding: 0.5rem 3rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: transparent;
+      color: whitesmoke;
+      border-radius: 8px;
+
+      &:hover {
+        color: wheat;
+        background-color: #662558;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contact_content_form {
+    text-align: center;
+    &_wrapper {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
