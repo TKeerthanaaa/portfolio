@@ -64,4 +64,10 @@
       grid-template-columns: repeat(1, 1fr);
     }
   }
+  .picture {
+    .pic {
+      width: 50%;
+      height: 50vh;
+    }
+  }
 }
